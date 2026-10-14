@@ -1,0 +1,8 @@
+node_modules
+unpackage
+dist
+backend/target
+*.log
+.trash
+.DS_Store
+*.local

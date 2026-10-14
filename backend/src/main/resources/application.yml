@@ -1,0 +1,47 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ecommerce-backend
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_DB:ecommerce}?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${MYSQL_USER:ecom_app}
+    password: ${MYSQL_PASSWORD:Ecom#2026}
+    hikari:
+      pool-name: EcomHikariPool
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 300000
+      max-lifetime: 1200000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+      validation-timeout: 5000
+      leak-detection-threshold: 60000
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      # 持久化库：首次建表用 update，保留已有数据；种子数据初始化器幂等跳过
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+        jdbc:
+          batch_size: 50
+        order_inserts: true
+        order_updates: true
+    show-sql: false
+
+app:
+  # Access Token 有效期（秒）。演示无感刷新设为 120s；生产建议 900s
+  access-token-ttl: 120
+  # Refresh Token 有效期（秒）：7 天
+  refresh-token-ttl: 604800
+
+logging:
+  level:
+    root: INFO
+    com.community.ecommerce: INFO
+    org.hibernate.SQL: WARN

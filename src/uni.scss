@@ -1,0 +1,54 @@
+/* ===== 主题色 ===== */
+$primary-color: #ff4d4f;
+$primary-light: #fff1f0;
+$primary-dark: #d9363e;
+$primary-gradient: linear-gradient(135deg, #ff6a6c 0%, #ff4d4f 55%, #f5384d 100%);
+$success-color: #34c759;
+$warning-color: #ff9f0a;
+$price-color: #ff4d4f;
+
+/* ===== 文字（深中性色，提升对比层次） ===== */
+$text-color: #1d1d24;
+$text-secondary: #5c5c68;
+$text-tertiary: #9a9aa6;
+$text-placeholder: #c4c4ce;
+
+/* ===== 背景 / 边框（冷调浅灰，降低纯白刺眼感） ===== */
+$bg-color: #f6f7f9;
+$bg-white: #ffffff;
+$bg-gray: #f2f3f5;
+$border-color: rgba(29, 29, 36, 0.06);
+$divider-color: rgba(29, 29, 36, 0.04);
+
+/* ===== 圆角 ===== */
+$radius-sm: 8rpx;
+$radius-md: 16rpx;
+$radius-lg: 24rpx;
+$radius-xl: 32rpx;
+$radius-pill: 999rpx;
+
+/* ===== 间距 ===== */
+$spacing-xs: 8rpx;
+$spacing-sm: 12rpx;
+$spacing-md: 24rpx;
+$spacing-lg: 32rpx;
+$spacing-xl: 48rpx;
+
+/* ===== 字号 ===== */
+$font-xs: 20rpx;
+$font-sm: 24rpx;
+$font-md: 28rpx;
+$font-lg: 32rpx;
+$font-xl: 40rpx;
+
+/* ===== 阴影（分层：环境光 + 投影） ===== */
+$shadow-card: 0 2rpx 16rpx rgba(29, 29, 36, 0.05);
+$shadow-float: 0 8rpx 32rpx rgba(29, 29, 36, 0.14);
+$shadow-primary: 0 8rpx 20rpx rgba(255, 77, 79, 0.3);
+
+/* ===== 玻璃拟态 ===== */
+$glass-bg: rgba(255, 255, 255, 0.82);
+$glass-blur: saturate(180%) blur(20px);
+
+/* ===== 导航栏 ===== */
+$nav-bar-height: 44px;
